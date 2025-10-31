@@ -50,9 +50,6 @@ plt.text(0.5, 1e5, "Visible part of spectrum",
          fontsize=10,
          ha='center',
          va='center')
-
-
-
 #%%
 T=np.array([100,300,500,1000,5777])#K
 lambda_max=2898/T 
@@ -66,18 +63,19 @@ plt.plot(lambda_max,Eb_max[:,0,0],'k--',label="Wien's law")
 plt.legend()
 plt.show()
 
-#%% Evaluate spectral blackbody emissive power for Q3a
+#%% Evaluate spectral blackbody emissive power
 T_eval=2000
 lambda_at_2000K=2898/T_eval
 Spectral_blackbody_emissive_power_at_2000K=blackbody_emissive_power(c_o,n,k,2000,h,lambda_at_2000K)
 print(f'{Spectral_blackbody_emissive_power_at_2000K} W/m²µm')
 
 
-#%% Evaluate spectral blackbody emissive power for Q3b
+#%% Evaluate spectral blackbody emissive power
 
 
 total_emissive_power=emissive_power(n,T_eval)
 print(f'{total_emissive_power} W/m²')
+
 
 
 
